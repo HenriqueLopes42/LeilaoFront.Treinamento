@@ -1,0 +1,25 @@
+<div class="container mt-3">
+    <h2>Lista de Leilões</h2>
+    <a href="leilao/incluir" class="btn btn-primary">Incluir Leilão</a>
+     <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Nome</th>
+          <th>Descrição</th>
+          <th>Data</th>
+          <th>Ativo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let leilao of leiloes">
+          <td>{{leilao.idLeilao}}</td>
+          <td>{{leilao.nome}}</td>
+          <td>{{leilao.descricao}}</td>
+          <td>{{leilao.data}}</td>
+          <td>{{leilao.ativo}}</td>
+          <td><a href="leilao/alterar" class="btn btn-info">Alterar</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

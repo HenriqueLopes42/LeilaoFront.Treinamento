@@ -1,0 +1,28 @@
+<div class="container mt-3">
+    <h2>Lista de Compradores</h2>
+    <a href="comprador/incluir" class="btn btn-primary">Incluir Comprador</a> <!--Esse é o botao para incluir um comprador-->
+     <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Nome</th>
+          <th>CPF</th>
+          <th>Data de Nascimento</th>
+          <th>Telefone</th>
+          <th>E-mail</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let comprador of compradores">
+          <td>{{comprador.idComprador}}</td>
+          <td>{{comprador.nome}}</td>
+          <td>{{comprador.cpf}}</td>
+          <td>{{comprador.dataNascimento}}</td>
+          <td>{{comprador.telefone}}</td>
+          <td>{{comprador.email}}</td>
+          <td><a href="comprador/alterar" class="btn btn-info">Alterar</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

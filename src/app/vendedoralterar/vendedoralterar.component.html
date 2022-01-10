@@ -1,0 +1,46 @@
+<H2>Incluir Vendedor</H2>
+<div class="container mt-5">
+    <div class="row">
+<form  #frm="ngForm" (ngSubmit)="alterar(frm)" method="put">
+    
+    <div class="mb-3 mt-3">
+      <label for="nome" class="form-label">Nome:</label>
+      <input type="nome" class="form-control" id="nome" placeholder="Digite o nome" name="nome"
+      [(ngModel)]="vendedores.nome" >
+    </div>
+
+
+    <div class="mb-3">
+      <label for="registro" class="form-label">CPF:</label>
+      <input type="text" class="form-control" id="cpf" placeholder="Informe o cpf" name="cpf"
+      [(ngModel)]="vendedores.cpf" >
+    </div>
+
+    <div class="mb-3">
+        <label for="preco" class="form-label">Nascimento:</label>
+        <input type="date" class="form-control" id="Nascimento" placeholder="Informe a Data De Nascimento" name="Nascimento" 
+        [(ngModel)]="vendedores.dataNascimento"  >
+    </div>
+
+    <div class="mb-3">
+        <label for="idade" class="form-label">Telefone:</label>
+        <input type="text" class="form-control" id="telefone" placeholder="Informe a idade" name="telefone" 
+        [(ngModel)]="vendedores.telefone" >
+    </div>
+
+    <div class="mb-3">
+        <label for="pesoArroba" class="form-label">Email:</label>
+        <input type="text" class="form-control" id="email" placeholder="Informe o Email" name="email"
+        [(ngModel)]="vendedores.email" >
+    </div>
+
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="ativo" name="ativo" value="1" checked
+        [(ngModel)]="vendedores.ativo"> 
+        <label class="form-check-label">Ativo</label>
+      </div>
+
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+</div>
+</div>

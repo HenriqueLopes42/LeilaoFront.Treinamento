@@ -1,0 +1,54 @@
+<h2>Alterar Comprador</h2>
+
+<div class="container mt-5">
+    <div class="row">
+        <form  #frm="ngForm" (ngSubmit)="alterar(frm)" method="post">
+
+            <div class="mb-3 mt-3">
+                <label for="nome" class="form-label">Nome:</label>
+                <input type="nome" class="form-control" id="nome" placeholder="Digite o nome" name="nome"
+                [(ngModel)]="comprador.nome" >
+            </div>
+
+            <div class="mb-3 mt-3">
+                <label for="cpf" class="form-label">CPF:</label>
+                <input type="cpf" class="form-control" id="cpf" placeholder="Digite o CPF" name="cpf"
+                [(ngModel)]="comprador.cpf" >
+              </div>
+
+              <div class="form-group">
+                <label for="dataNascimento">Data de Nascimento Comprador: </label>
+                <input type="date" name="dataNascimento" id="dataNascimento" class="form-control" placeholder="Data de Nascimento" [(ngModel)]="comprador.dataNascimento" />
+            </div>
+
+            <div class="mb-3 mt-3">
+                <label for="telefone" class="form-label">Telefone:</label>
+                <input type="telefone" class="form-control" id="telefone" placeholder="Digite o telefone" name="telefone"
+                [(ngModel)]="comprador.telefone" >
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Endereço de E-mail</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@exemplo.com" name="email">
+            </div>
+
+            <div class="mb-3">
+                <label for="idLeilao" class="form-label"> <br> Leilão:</label>
+                <select class="form-control" id="idLeilao" placeholder="Informe o Leilão" name="idLeilao"
+                [(ngModel)]="comprador.idLeilao">
+                    <option *ngFor="let leilao of leiloes" value="{{leilao.idLeilao}}"    >{{leilao.nome}}</option>
+                  </select>
+            </div>
+
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="ativo" name="ativo" value="1" checked
+                [(ngModel)]="comprador.ativo">
+                <label class="form-check-label" for="flexSwitchCheckChecked">Ativo</label>
+            </div>
+
+            <br>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+
+      </form>
+    </div>
+</div>

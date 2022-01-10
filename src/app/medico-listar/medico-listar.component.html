@@ -1,0 +1,29 @@
+<div class="container mt-3">
+    <h2>Lista de Médicos Veterinários</h2>
+    <a href="medico/incluir" class="btn btn-primary">Incluir Médico Veterinário</a>
+     <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Nome</th>
+          <th>CRMV</th>
+          <th>Data de Nascimento</th>
+          <th>Telefone</th>
+          <th>E-mail</th>
+          <th>Ativo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let medico of medicos">
+          <td>{{medico.idMedico}}</td>
+          <td>{{medico.nome}}</td>
+          <td>{{medico.crmv}}</td>
+          <td>{{medico.dataNascimento}}</td>
+          <td>{{medico.telefone}}</td>
+          <td>{{medico.email}}</td>
+          <td>{{medico.ativo}}</td>
+          <td><a href="medico/alterar" class="btn btn-info">Alterar</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

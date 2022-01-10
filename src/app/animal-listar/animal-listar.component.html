@@ -1,0 +1,29 @@
+<div class="container mt-3">
+    <h2>Lista de Animais</h2>
+    <a href="animal/incluir" class="btn btn-primary">Incluir Animal</a>
+     <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Nome</th>
+          <th>Registro</th>
+          <th>Preço</th>
+          <th>Idade</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let animal of animais">
+          <td>{{animal.idAnimal}}</td>
+          <td>{{animal.nome}}</td>
+          <td>{{animal.registro}}</td>
+          <td>{{animal.preco}}</td>
+          <td>{{animal.idade}}</td>
+          <td>
+            <a href="animal/alterar/{{animal.idAnimal}}" class="btn btn-info">Alterar</a> &nbsp;
+            <a href="animal/excluir/{{animal.idAnimal}}" class="btn btn-info">Excluir</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

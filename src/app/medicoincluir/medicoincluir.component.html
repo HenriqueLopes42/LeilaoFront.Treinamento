@@ -1,0 +1,50 @@
+<H2>Incluir Leilão</H2>
+
+<div class="container">
+  <div class="row">
+
+    <form  #frm="ngForm" (ngSubmit)="incluir(frm)" method="post">
+
+      <div class="mb-3 mt-3">
+        <label for="nome" class="form-label">Nome:</label>
+        <input type="text" class="form-control" id="nome" placeholder="Digite o nome" name="nome"
+        [(ngModel)]="medico.nome" >
+      </div>
+
+      <div class="mb-3 mt-3">
+        <label for="crmv" class="form-label">CRMV:</label>
+        <input type="text" class="form-control" id="crmv" placeholder="Digite o crmv" name="crmv"
+        [(ngModel)]="medico.crmv" >
+      </div>
+
+      <div class="mb-3 mt-3">
+        <label for="dataNascimento" class="form-label">Data de nascimento:</label>
+        <input type="date" class="form-control" id="dataNascimento" placeholder="Digite a data de nascimento" name="dataNascimento"
+        [(ngModel)]="medico.dataNascimento" >
+      </div>
+
+      <div class="mb-3">
+          <label for="telefone" class="form-label">Telefone:</label>
+          <input type="text" class="form-control" id="telefone" placeholder="Informe o telefone" name="telefone"
+          [(ngModel)]="medico.telefone"  >
+      </div>
+
+      <div class="mb-3 mt-3">
+        <label for="email" class="form-label">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Digite seu email" name="email"
+        [(ngModel)]="medico.email" >
+      </div>
+
+
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="ativo" name="ativo" value="1" checked
+        [(ngModel)]="medico.ativo">
+        <label class="form-check-label">Ativo</label>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="container mt-3">
+    <h2>Lista de Raças</h2>
+    <a href="raca/incluir" class="btn btn-primary">Incluir Raça</a>
+     <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Nome</th>
+          <th>Descrição</th>
+          <th>Ativo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let raca of racas">
+          <td>{{raca.idRaca}}</td>
+          <td>{{raca.nome}}</td>
+          <td>{{raca.descricao}}</td>
+          <td>{{raca.ativo}}</td>
+          <td><a href="raca/alterar" class="btn btn-info">Alterar</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
